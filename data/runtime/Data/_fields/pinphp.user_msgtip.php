@@ -1,0 +1,1 @@
+{"0":"uid","1":"type","2":"num","_autoinc":false,"_pk":"type","_type":{"uid":"int(10) unsigned","type":"tinyint(1) unsigned","num":"tinyint(3) unsigned"}}

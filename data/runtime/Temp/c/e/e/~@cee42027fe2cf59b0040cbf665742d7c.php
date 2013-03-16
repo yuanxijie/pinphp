@@ -1,0 +1,3 @@
+<?php
+//000000003600a:4:{i:0;a:7:{s:2:"id";s:1:"3";s:4:"name";s:6:"淘宝";s:3:"img";s:0:"";s:3:"url";s:21:"http://www.taobao.com";s:7:"cate_id";s:1:"1";s:5:"ordid";s:1:"0";s:6:"status";s:1:"1";}i:1;a:7:{s:2:"id";s:1:"1";s:4:"name";s:9:"蘑菇街";s:3:"img";s:0:"";s:3:"url";s:22:"http://www.mogujie.com";s:7:"cate_id";s:1:"1";s:5:"ordid";s:1:"1";s:6:"status";s:1:"1";}i:2;a:7:{s:2:"id";s:1:"4";s:4:"name";s:12:"京东商城";s:3:"img";s:0:"";s:3:"url";s:21:"http://www.360buy.com";s:7:"cate_id";s:1:"1";s:5:"ordid";s:1:"2";s:6:"status";s:1:"1";}i:3;a:7:{s:2:"id";s:1:"5";s:4:"name";s:6:"天猫";s:3:"img";s:0:"";s:3:"url";s:21:"http://www.tmall.com/";s:7:"cate_id";s:1:"1";s:5:"ordid";s:1:"3";s:6:"status";s:1:"1";}}
+?>
