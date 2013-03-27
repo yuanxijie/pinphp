@@ -5,12 +5,16 @@
 <title><?php echo ($page_seo["title"]); ?> - Powered by PinPHP</title>
 <meta name="keywords" content="<?php echo ($page_seo["keywords"]); ?>" />
 <meta name="description" content="<?php echo ($page_seo["description"]); ?>" />
-<?php if(is_array($csses)): $i = 0; $__LIST__ = $csses;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$f): $mod = ($i % 2 );++$i;?><link rel="stylesheet" type="text/css" href="__STATIC__/css/default/<?php echo ($f); ?>" /><?php endforeach; endif; else: echo "" ;endif; ?>
+
 <link rel="stylesheet" type="text/css" href="__STATIC__/css/default/base.css" />
 <link rel="stylesheet" type="text/css" href="__STATIC__/css/default/style.css" />
-
+<?php if(is_array($csses)): $i = 0; $__LIST__ = $csses;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$f): $mod = ($i % 2 );++$i; if(substr($f, 0,4) == 'http'): ?><link href="<?php echo ($f); ?>" type="text/css" rel="stylesheet">
+    <?php else: ?>
+        <link rel="stylesheet" type="text/css" href="__STATIC__/css/default/<?php echo ($f); ?>" /><?php endif; endforeach; endif; else: echo "" ;endif; ?>
 <script src="__STATIC__/js/jquery/jquery.js"></script>
-<?php if(is_array($jses)): $i = 0; $__LIST__ = $jses;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$j): $mod = ($i % 2 );++$i;?><script src="__STATIC__/js/<?php echo ($j); ?>"></script><?php endforeach; endif; else: echo "" ;endif; ?>
+<?php if(is_array($jses)): $i = 0; $__LIST__ = $jses;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$j): $mod = ($i % 2 );++$i; if(substr($j, 0,4) == 'http'): ?><script src="<?php echo ($j); ?>" type="text/javascript"></script>
+    <?php else: ?>
+        <script src="__STATIC__/js/<?php echo ($j); ?>"></script><?php endif; endforeach; endif; else: echo "" ;endif; ?>
 </head>
 <body>
 <!--头部开始-->
@@ -140,7 +144,7 @@
         <p class="intro clr6"><?php echo ($item["intro"]); ?></p>
         <!--评论-->
         <?php if(!empty($item['comment_list'])): ?><ul class="rep_list">
-            <?php $__FOR_START_247671915__=0;$__FOR_END_247671915__=C('pin_item_cover_comments');for($i=$__FOR_START_247671915__;$i < $__FOR_END_247671915__;$i+=1){ if(!empty($item['comment_list'][$i])): ?><li class="rep_f">
+            <?php $__FOR_START_182953171__=0;$__FOR_END_182953171__=C('pin_item_cover_comments');for($i=$__FOR_START_182953171__;$i < $__FOR_END_182953171__;$i+=1){ if(!empty($item['comment_list'][$i])): ?><li class="rep_f">
                 <a href="<?php echo U('space/index', array('uid'=>$item['comment_list'][$i]['uid']));?>" target="_blank">
                     <img src="<?php echo avatar($item['comment_list'][$i]['uid'], 24);?>" class="J_card avt fl r3" alt="<?php echo ($item['comment_list'][$i]['uname']); ?>" data-uid="<?php echo ($item['comment_list'][$i]['uid']); ?>">
                 </a>

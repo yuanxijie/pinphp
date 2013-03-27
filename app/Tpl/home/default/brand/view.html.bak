@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <include file="public:head"/>
+</head>
+<body>
+<include file="public:header"/>
+
+<div class="main_wrap">
+    <div class="book_cate">
+        <div class="bcate">
+            <volist name="brand_cates" id="vo">
+                <span <if condition="$cate_id eq $vo['id']">class="current"</if> >
+                <a  href="{:U('brand/index', array('cate_id'=>$vo['id']))}">{$vo.name}</a><b></b>
+                </span>
+            </volist>
+        </div>
+    </div>
+    <div class="wall_wrap clearfix">
+        <div id="J_waterfall" class="wall_container clearfix"
+             data-uri="__ROOT__/?m=book&a=index_ajax&tag={$tag}&sort={$sort}&p={$p}">
+            <div class="J_item wall_tag">
+                <div class="bic_brand j_BrandItemInfo">
+                    <p class="bic_logo">
+                        <a target="_blank"
+                           href="http://list.tmall.com/search_product.htm?style=w&amp;brand=29896&amp;from=brandguide"><img
+                                width="90" height="45"
+                                src="{$brand.logo}"
+                                alt="{$brand.name}"></a><strong>{$brand.name}</strong></p>
+                    <dl class="bIi-style clearfix">
+                        <dt>品牌描述：</dt>
+                        <dd>{$brand.memo}</dd>
+                    </dl>
+                    <p>月总销量：{$brand.month_sale}件</p>
+
+                    <p class="bIi-intro j_BrandItemIntro">only产品个性突出，适合参加聚会和社交。让大胆而独立的都市女孩通过服饰表现特立独行的自我。</p>
+                </div>
+            </div>
+            <include file="public:waterfall"/>
+        </div>
+        <present name="show_load">
+            <div id="J_wall_loading" class="wall_loading tc gray"><span>{:L('loading')}</span></div>
+        </present>
+        <present name="page_bar">
+            <div id="J_wall_page" class="wall_page"
+            <present name="show_page">style="display:block;"</present>
+            >
+            <div class="page_bar">{$page_bar}</div>
+    </div>
+    </present>
+</div>
+
+</div>
+<include file="public:footer"/>
+</body>
+</html>

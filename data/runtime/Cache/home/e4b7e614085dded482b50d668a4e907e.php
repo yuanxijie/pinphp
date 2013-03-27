@@ -119,81 +119,12 @@
         </div>
     </div>
     <div class="blog_piece">
-        <div class="blog_title blog_view_title">梦一样的初恋</div>
-        <div class="blog_view_info">发布： 02月21 分类： 爱情 标签:初恋 一样</div>
-        <div class="blog_view_content"><p style="margin-top:0px;margin-bottom:12px;padding:0px;line-height:22px;white-space:normal;">
-            &nbsp; &nbsp; &nbsp;&nbsp;他和她是在村子里是前后邻居，说起来还是近亲。那是在八十年代中期，刚包产到户的年代，他们两家和另外两家成立了一个小组共同分到了生产队的一头牛，一起耕种土地。平时放了学或者周末假期的时候，他们经常帮助家长干农活，所以，接触的就比较多。
-        </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>那个时候，他十四岁，她比他大一岁，十五岁。都在邻村上初中，早晚自习，双方的家长就让他们结伴而行，相互照顾。都是豆蔻年华，两小无猜，青梅竹马，他们之间自然而然慢慢的就产生了一些别样的感情。总是喜欢在一起，一起去河边看柳，一起在月光下的麦场的草垛旁谈心。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>当时他的家里已经给他盖了三间大瓦房，预备以后好给他娶媳妇，当时只是安装了大门，正屋里放了好多切好的牛料。每当晚饭后，写完了作业，他就在她家后墙上踹三脚，她听到了就会出来，然后一起到这里，躺在柔软的干草上面说话，一说就到很晚。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>后来他考上了高中，到了镇上上学了，她则留在了家里务农，每周只能见一次了。但是每个周末回来，他们都要在一起。相约这辈子永不分离，他发誓非她不娶，她发誓�伤患蓿�彼此死守一辈子。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>可是不久，传来了一个消息。他爸爸在很远的一个城市国有大型企业做工会主席，符合条件，全家可以农转非了。也就是说，她们全家和她就要离开这个生活了十多年的乡村，去大城市里生活了。从此他们就将分开，不能生活在一起了。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>听到这个消息，他们相拥而泣，她说她不会走的，她要留下来，等他们都长大了，她要和他结婚，然后生一大群孩子，过平凡的日子。他也说一定好好学习，争取考上大学，就可以分到大城市了，再把她接去，一起享受爱情的甜蜜。&nbsp;
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>毕竟都是小孩子，大人的意志是违背不了的。最后，她还是和她的家人一起，去了遥远的另外一个城市。那个时候，交通和通信都很不发达，之间只能靠偶尔的书信交流。后来，慢慢的书信也越来越少了，她的爸妈截取了他写去的书信，他们的交流中断了。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>一转眼几年过去了，他已经是一名大四的学生了，很快就要毕业。在寒假过后，他在地图上找到了她在的城市，他对家人谎称有事要提前几天到校，他却坐上了找她的列车，来到了她的城市，整整找了三天才找到，期间他晚上就住在一个简易的小旅馆里。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>来到她的家里，她们的家人还是热情的接待了他，虽然都知道他此行的目的。等吃中午饭的时候，她才回来，身边跟着一个男孩子。将近十年的相遇，没有什么更多的交流，甚至都没有能说上几句话，他就匆匆离开了，他承受不了那种尴尬的气氛。&nbsp;
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>她的二姐送他去的车站，路上对他说，我们都知道你们两个人好，但是事情过去就过去了吧，如今你也大学快毕业了，她身边的男孩就是她的男朋友，也很快就要结婚了，面对现实，各自过各自的生活吧。他眼里含着泪说，说过的话，留下的誓言，怎么就轻易的忘记了呢。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>他毕业以后回到了老家的县城工作，一晃又是十多年过去了，之间他娶妻生子，日子过得平淡而幸福。他们从来没有联系过，听别的同学说，她曾经回来过老家几次，但他们没有见过面。&nbsp;
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>随着时间的流失，他越来越怀念他的初恋，好多次在梦中与她相遇，她还是年轻时候的容颜。而这样的做梦的频率越来越高，有的时候甚至沉迷在其中不能自拔。尤其过了而立之年，他想知道她的近况的欲望越来越强烈。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>他也向她当初很要好的同学打听过她的手机和别的联系方式，始终未果。前几天，他一个初中的同学的父亲去世了，他们好多同学集合起来一起去吊唁，期间说到了她，大家都没有她的消息。有个同学知道他们之间的关系，况且他们还是同村，就命令他一定要设法找到她的联系方式，然后转发给同学们，这么个年龄了，应该加强联系了。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>他想到老家找她的叔叔们要号码，又怕引起不必要的误会。他回到家里，左思右想，终于想到了网络，网络是神奇的，或许借助网络的力量，一定会找到她。他首先找到了她在的那个企业的网站，然后在站内搜索她的名字，可是没有结果。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>他又想到，每个城市，每个单位都有自己的百度贴吧，会不会她在的企业也有自己的贴吧呢。于是，他在百度里输入了她所在企业的名字，果然找到了她们企业的贴吧。此时正是周末的上午十一点多钟，他马上在上面发了一个帖子，写的是在他的城市的老家的同学找她，并写上她的名字，还有他的QQ号码，希望看到了以后和他联系，之后他就忙自己的事情了。&nbsp;
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>吃过午饭，他又来到了电脑前面，他第一眼就看到了他QQ有个加好友的请求，他马上打开一看，是她在的城市的一个男孩，他赶紧同意了，马上聊了起来，原来这个男孩就是她的儿子，他的妈妈就在他的身边，他给了电话号码，她打了过来。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>真要感谢网络，二十多年时间没有找到，他就是发了一个帖子，两个小时的时间，就找到了她，他有点不敢相信这是真的。他非常的激动，急忙说着话，好像要几句就像概括出着二十多年的思念。她也有些激动吧，开始聊了好久还说不知道是谁，后来才说，其实早就猜到应该是他，只是故意不说而已。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>她只是说，上班的时候，儿子就打来电话说，企业吧里有个找她的帖子，在下班的路上，有个同事也把这个消息告诉了她。她就急忙回家，想看看到底是谁。期间老公曾经给她打过电话，说肯定是他，别的同学不会这么多年了还在找她，她起初还不相信呢。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>等到她下午上班的，他又给她打去电话，说了彼此的一些事情和家庭状况。他说的更多的是这些年来的思念和怀念。她说的都是，现在已经这个年龄了，没有别的什么想法了，好好的伺候老公和儿子，平平安安就是最大的幸福了。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>他能听的出来，她现在生活的还好，不想让他打扰她平静的生活。其实，他也没有什么别的想法，就是想知道曾经的恋人，在另外一个城市里，这么多年了，生活的是不是如意，只要过得比自己好也就心满意足了。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>他们打了很长时间的电话，直到她说自己的手机快没有电了。他说什么时候没有电了，什么时候停止吧。后来电话突然中断了，他知道这是她的手机没有电了。他恋恋不舍地放下了手机，回味着突如其来的幸福，也是突如其来的无限的失落。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>他来到她儿子的QQ空间，一眼就看到了有她的照片，她真的变化不大，还是二十多年前的样子，和自己在梦里见到的一模一样。然后把照片保存到了自己的电脑里，一整个晚上，他都在对着照片发呆，回味着那些逝去的时光。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>初恋，其实就像一个美丽的气球一样，只能握在手里欣赏和回忆，如果你想知道里面的内容，打开了，就破坏了，就只是剩下几块碎屑，空留惆怅。那些过去的时光，永远也不会再回来了，即使回来了，也不再是原来的味道。
-            </p>
-            <p style="margin-top:0px;margin-bottom:15px;padding:0px;line-height:22px;white-space:normal;">
-                <span style="line-height:22px;white-space:normal;">&nbsp; &nbsp; &nbsp;&nbsp;</span>深夜，他还是做出了决定，删除了存在电脑里的照片，还有她儿子的QQ，还有他手机里接过一次，打过一次的号码。他决定把那份初恋，用纯洁的爱细心地包好，放在心灵最深处的角落，以后，永远也不会再去翻看。
-            </p></div>
-        <div class="blog_view_link">本文固定链接：<a href="http://www.521715.com/index.php?m=article&amp;a=view&amp;id=8">http://www.521715.com/index.php?m=article&amp;a=view&amp;id=8</a></div>
+        <div class="blog_title blog_view_title"><?php echo ($article["title"]); ?></div>
+        <div class="blog_view_info">发布： <?php echo ($article["add_time"]); ?> 标签:初恋 一样</div>
+        <div class="blog_view_content">
+            <?php echo ($article["info"]); ?>
+        </div>
+        <div class="blog_view_link">本文固定链接：<a href="<?php echo U('article/view',array('id'=>$article['id']));?>"><?php echo U('article/view',array('id'=>$article['id']), true, false, true);?></a></div>
         <div class="blog_view_pn">上一篇：<a href="/index.php?m=article&amp;a=view&amp;id=7">爱情，就像去远镇</a></div>
         <div>下一篇：<a href="/index.php?m=article&amp;a=view&amp;"></a></div>
         <div class="blog_view_link">

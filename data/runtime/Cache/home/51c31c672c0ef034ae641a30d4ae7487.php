@@ -81,7 +81,6 @@
 </div>
 <!--商品详细-->
 <div class="main_wrap pt10" style="_padding-left:0;">
-    <div class="mt10"><?php echo R('advert/index', array(14), 'Widget');?></div>
     <div class="itembox clearfix">
         <div class="itembox_l fl">
             <div class="note_box clearfix">

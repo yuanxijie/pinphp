@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <ul>
-                    <?php $__FOR_START_1519664007__=0;$__FOR_END_1519664007__=C('pin_album_cover_items');for($i=$__FOR_START_1519664007__;$i < $__FOR_END_1519664007__;$i+=1){ ?><li class="<?php if($i == 0): ?>big<?php elseif($i == 1): ?>left small<?php else: ?>small<?php endif; ?>">
+                    <?php $__FOR_START_1249482017__=0;$__FOR_END_1249482017__=C('pin_album_cover_items');for($i=$__FOR_START_1249482017__;$i < $__FOR_END_1249482017__;$i+=1){ ?><li class="<?php if($i == 0): ?>big<?php elseif($i == 1): ?>left small<?php else: ?>small<?php endif; ?>">
                         <?php if(isset($album['cover'][$i])): if($i == 0): ?><img class="J_decode_img" data-uri="<?php echo base64_encode(attach(get_thumb($album['cover'][$i]['img'], '_m'), 'item'));?>" />
                         <?php else: ?>
                         <img class="J_decode_img" data-uri="<?php echo base64_encode(attach(get_thumb($album['cover'][$i]['img'], '_s'), 'item'));?>" /><?php endif; endif; ?>

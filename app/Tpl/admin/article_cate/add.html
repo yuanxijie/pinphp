@@ -5,7 +5,11 @@
 		<tr> 
 			<th width="120">{:L('article_cate_parent')} :</th>
 			<td>
-				<select class="J_cate_select mr10" data-pid="0" data-uri="{:U('article_cate/ajax_getchilds')}" data-selected="{$spid}"></select>
+				<!--<select class="J_cate_select mr10" data-pid="0" data-uri="{:U('article_cate/ajax_getchilds')}" data-selected="{$spid}">-->
+                <select name="test">
+                    <option value="test">test</option>
+                    <option value="test1">test1</option>
+				</select>
 				<input type="hidden" name="pid" id="J_cate_id" />
 			</td>
 		</tr>
@@ -54,7 +58,7 @@
 $(function(){
 	$.formValidator.initConfig({formid:"info_form",autotip:true});
 	$("#name").formValidator({onshow:lang.please_input+lang.article_cate_name,onfocus:lang.please_input+lang.article_cate_name}).inputValidator({min:1,onerror:lang.please_input+lang.article_cate_name});
-	
+
 	$('#info_form').ajaxForm({success:complate,dataType:'json'});
 	function complate(result){
 		if(result.status == 1){
@@ -65,8 +69,8 @@ $(function(){
 			$.pinphp.tip({content:result.msg, icon:'alert'});
 		}
 	}
-	$('.J_cate_select').cate_select();
-	
+//	$('.J_cate_select').cate_select();
+
 	//上传图片
     var uploader = new qq.FileUploaderBasic({
     	allowedExtensions: ['jpg','gif','jpeg','png','bmp','pdg'],

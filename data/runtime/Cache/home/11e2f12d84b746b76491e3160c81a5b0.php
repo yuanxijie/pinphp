@@ -122,7 +122,7 @@
             <ul class="index_album_list clearfix">
                 <?php $data = S('02ddb2a814c286313b3482f5e63c0101');if (false === $data) { $tag_album_class = new albumTag;$data = $tag_album_class->lists(array('cache'=>'3600','num'=>'3','return'=>'data','type'=>'lists','where'=>'is_index=1',));S('02ddb2a814c286313b3482f5e63c0101', $data, 3600); } if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$album): $mod = ($i % 2 );++$i;?><li class="J_album_item index_album">
                     <ul>
-                        <?php $__FOR_START_1888609666__=0;$__FOR_END_1888609666__=C('pin_album_cover_items');for($i=$__FOR_START_1888609666__;$i < $__FOR_END_1888609666__;$i+=1){ ?><li class="<?php if($i == 0): ?>big<?php else: ?>small<?php endif; ?>">
+                        <?php $__FOR_START_642480297__=0;$__FOR_END_642480297__=C('pin_album_cover_items');for($i=$__FOR_START_642480297__;$i < $__FOR_END_642480297__;$i+=1){ ?><li class="<?php if($i == 0): ?>big<?php else: ?>small<?php endif; ?>">
                             <?php if(isset($album['cover'][$i])): if($i == 0): ?><img src="<?php echo attach(get_thumb($album['cover'][$i]['img'], '_m'), 'item');?>" />
                             <?php else: ?>
                             <img src="<?php echo attach(get_thumb($album['cover'][$i]['img'], '_s'), 'item');?>" /><?php endif; endif; ?>
@@ -209,7 +209,7 @@
         <p class="intro clr6"><?php echo ($item["intro"]); ?></p>
         <!--评论-->
         <?php if(!empty($item['comment_list'])): ?><ul class="rep_list">
-            <?php $__FOR_START_231665364__=0;$__FOR_END_231665364__=C('pin_item_cover_comments');for($i=$__FOR_START_231665364__;$i < $__FOR_END_231665364__;$i+=1){ if(!empty($item['comment_list'][$i])): ?><li class="rep_f">
+            <?php $__FOR_START_1115527946__=0;$__FOR_END_1115527946__=C('pin_item_cover_comments');for($i=$__FOR_START_1115527946__;$i < $__FOR_END_1115527946__;$i+=1){ if(!empty($item['comment_list'][$i])): ?><li class="rep_f">
                 <a href="<?php echo U('space/index', array('uid'=>$item['comment_list'][$i]['uid']));?>" target="_blank">
                     <img src="<?php echo avatar($item['comment_list'][$i]['uid'], 24);?>" class="J_card avt fl r3" alt="<?php echo ($item['comment_list'][$i]['uname']); ?>" data-uid="<?php echo ($item['comment_list'][$i]['uid']); ?>">
                 </a>

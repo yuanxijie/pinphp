@@ -119,19 +119,18 @@
         </div>
     </div>
 
-
     <div class="blog_piece">
-        <div class="blog_title"><a title="梦一样的初恋" href="/index.php?m=article&amp;a=view&amp;id=8">梦一样的初恋</a></div>
-        <div class="blog_intro">
-            <div class="blog_pic"><img src="http://www.521715.com/data/upload/article/1302/21/5125bc4d668b1_thumb.jpg"></div>
-            <div style="text-indent:6px; margin-left:4px;">
-                初恋，其实就像一个美丽的气球一样，只能握在手里欣赏和回忆，如果你想知道里面的内容，打开了，就破坏了，就只是剩下几块碎屑，空留惆怅。那些过去的时光，永远也不会再回来了，即使回来了，也不再是原来的味道。
+        <?php if(is_array($articles)): $i = 0; $__LIST__ = $articles;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$article): $mod = ($i % 2 );++$i;?><div class="blog_title"><a title="<?php echo ($article["title"]); ?>" href="<?php echo U('article/view', array('id'=>$article['id']));?>"><?php echo ($article["title"]); ?></a></div>
+            <div class="blog_intro">
+                <div class="blog_pic"><img src="/data/upload/article/<?php echo ($article["img"]); ?>"></div>
+                <div style="text-indent:6px; margin-left:4px;">
+                    <?php echo ($article["intro"]); ?>
+                </div>
             </div>
-        </div>
-        <div class="blog_into"><a title="梦一样的初恋" href="/index.php?m=article&amp;a=view&amp;id=8"><span class="read_more">阅读全文</span></a></div>
-        <div class="blog_tag">标签:初恋 一样
+            <div class="blog_into"><a title="梦一样的初恋" href="<?php echo U('article/view', array('id'=>$article['id']));?>"><span class="read_more">阅读全文</span></a></div>
+            <div class="blog_tag">标签:<?php echo ($article["tags"]); ?>
                 <!-- JiaThis Button BEGIN -->
-                <div class="jiathis_style_24x24" onmouseover="javascript:setShare('梦一样的初恋 #初恋 一样#', 'http://www.521715.com/index.php?m=article&a=view&id=8' ,'      初恋，其实就像一个美丽的气球一样，只能握在手里欣赏和回忆，如果你想知道里面的内容，打开了，就破坏了，就只是剩下几块碎屑，空留惆怅。那些过去的时光，永远也不会再回来了，即使回来了，也不再是原来的味道。','http://www.521715.com/data/upload/article/1302/21/5125bc4d668b1_thumb.jpg');">
+                <div class="jiathis_style_24x24" onmouseover="javascript:setShare('<?php echo ($article["title"]); ?> #<?php echo ($article["tags"]); ?>#', '<?php echo U('article/view', array('id'=>$article['id']));?>' ,'      初恋，其实就像一个美丽的气球一样，只能握在手里欣赏和回忆，如果你想知道里面的内容，打开了，就破坏了，就只是剩下几块碎屑，空留惆怅。那些过去的时光，永远也不会再回来了，即使回来了，也不再是原来的味道。','http://www.521715.com/data/upload/article/1302/21/5125bc4d668b1_thumb.jpg');">
                     <a class="jiathis_button_qzone"></a>
                     <a class="jiathis_button_tsina"></a>
                     <a class="jiathis_button_tqq"></a>
@@ -142,51 +141,10 @@
                     <a class="jiathis_button_tianya"></a>
                     <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
                     <a class="jiathis_counter_style"></a>
+                    发布于  <?php echo ($article["add_time"]); ?>
                 </div>
-               <!-- JiaThis Button END -->
-            </div>
-        <div class="blog_title"><a title="爱情，就像去远镇" href="/index.php?m=article&amp;a=view&amp;id=7">爱情，就像去远镇</a></div>
-        <div class="blog_intro">
-            <div class="blog_pic"><img src="http://www.521715.com/data/upload/article/1302/21/5125bb5d173ba_thumb.jpg"></div>
-            <div style="text-indent:6px; margin-left:4px;">
-                要去远镇，我们会在想象中以为，那是一个很撩人，很浪漫的地方，想要一个很美丽的邂逅，能艳遇到自己心中的白马王子，再然后开始一段很浪漫的旅程，在旅程中或许会遇到很到美丽的风景，但最终还是要挪开脚步的，因为，属于我们的，只有那一片地方。远镇，在那里，等待的或许只是我们心血来潮的游逛，再然后，被磨平，回到属于自己的地方，又或许，选择了定居，因为那时爱的泛滥，离开那里就像是失去生命。不等到结果真正是什么的时候，也早以习惯了，终于也会相濡以沫。
-            </div>
-        </div>
-        <div class="blog_into"><a title="爱情，就像去远镇" href="/index.php?m=article&amp;a=view&amp;id=7"><span class="read_more">阅读全文</span></a></div>
-        <div class="blog_tag">标签:爱情 去远镇<!-- JiaThis Button BEGIN -->
-            <div class="jiathis_style_24x24">
-                <a class="jiathis_button_qzone"></a>
-                <a class="jiathis_button_tsina"></a>
-                <a class="jiathis_button_tqq"></a>
-                <a class="jiathis_button_renren"></a>
-                <a class="jiathis_button_kaixin001"></a>
-                <a class="jiathis_button_douban"></a>
-                <a class="jiathis_button_tieba"></a>
-                <a class="jiathis_button_tianya"></a>
-                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
-                <a class="jiathis_counter_style"></a>
-            </div>
-            <!-- JiaThis Button END -->
-
-
-        </div>
-        <div class="blog_title"><a title="爱的礼物" href="/index.php?m=article&amp;a=view&amp;id=6">爱的礼物</a></div>
-        <div class="blog_intro">
-            <div class="blog_pic"><img src="http://www.521715.com/data/upload/article/1302/21/5125ba4d24174_thumb.jpg"></div>
-            <div style="text-indent:6px; margin-left:4px;">&#12288;&#12288;“爱”非常地抽象，它看不见，也摸不着，却能牵肠挂肚地在我们心里翻腾。当你最困苦时，可以因为想到那份爱，而感觉振奋；当你在孤独的时刻，也可以因为触及一件带有爱的纪念品，而感觉温馨。</div>
-        </div>
-        <div class="blog_into"><a title="爱的礼物" href="/index.php?m=article&amp;a=view&amp;id=6"><span class="read_more">阅读全文</span></a></div>
-        <div class="blog_tag">标签:礼物<!-- JiaThis Button BEGIN -->
-            <div class="jiathis_style_24x24">
-                <a class="jiathis_button_qzone"></a>
-                <a class="jiathis_button_tsina"></a>
-                <a class="jiathis_button_tqq"></a>
-                <a class="jiathis_button_renren"></a>
-                <a class="jiathis_button_kaixin001"></a>
-                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-                <a class="jiathis_counter_style"></a>
-            </div>
-            <!-- JiaThis Button END -->
+                <!-- JiaThis Button END -->
+            </div><?php endforeach; endif; else: echo "" ;endif; ?>
         </div>
         <div class="page_bar">3 条记录 1/1 页</div>
     </div>

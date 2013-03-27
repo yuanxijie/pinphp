@@ -91,6 +91,7 @@
 <script src="__STATIC__/js/jquery/plugins/formvalidator.js"></script>
 <script src="__STATIC__/js/pinphp.js"></script>
 <script src="__STATIC__/js/admin.js"></script>
+
 <script>
 //初始化弹窗
 (function (d) {

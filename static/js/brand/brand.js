@@ -23,16 +23,24 @@ function slide(ele, type) {
     if(type == 'next') {
         if(left_pos >= -720) {
             left_pos -= 720;
-            ullist.css('left', String(left_pos) + "px");
-            $('a.bIc-slide-prev').removeClass('ks-switchable-disable-btn')
+            ullist.animate({left: String(left_pos) + "px"}, "slow");
+//            ullist.css('left', String(left_pos) + "px");
+            $(ele).siblings('a.bIc-slide-prev').removeClass('ks-switchable-disable-btn');
+            if(left_pos == -720*2) {
+                $(ele).addClass('ks-switchable-disable-btn');
+            }
         } else {
             $(ele).addClass('ks-switchable-disable-btn');
         }
     } else {
         if(left_pos <= -720) {
             left_pos += 720;
-            ullist.css('left', String(left_pos) + "px");
-            $('a.bIc-slide-next').removeClass('ks-switchable-disable-btn')
+//            ullist.css('left', String(left_pos) + "px");
+            ullist.animate({left: String(left_pos) + "px"}, "slow");
+            $(ele).siblings('a.bIc-slide-next').removeClass('ks-switchable-disable-btn');
+            if(left_pos == 0) {
+                $(ele).addClass('ks-switchable-disable-btn');
+            }
         } else {
             $(ele).addClass('ks-switchable-disable-btn');
         }
