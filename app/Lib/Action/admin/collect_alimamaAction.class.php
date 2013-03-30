@@ -22,6 +22,7 @@ class collect_alimamaAction extends backendAction {
         //获取淘宝商品分类
         $item_cate = $this->_get_tbcats();
         $this->assign('item_cate', $item_cate);
+
         $this->display();
     }
 
@@ -32,6 +33,7 @@ class collect_alimamaAction extends backendAction {
         if (IS_POST) {
             $cate_id = $this->_post('cate_id', 'intval');
             !$cate_id && $this->ajaxReturn(0, L('please_select') . L('publish_item_cate'));
+            $brand_id = $this->_post('brand_id', 'intval', 0);
             $auid = $this->_post('auid', 'intval');
             //必须指定用户
             !$auid && $this->ajaxReturn(0, L('please_select') . L('auto_user'));
@@ -54,10 +56,15 @@ class collect_alimamaAction extends backendAction {
                 'page_num' => $page_num,
                 'form_data' => $form_data,
             ));
+            $brands = M('brand')->select();
+            $this->assign('brands', $brands);
+
             $this->ajaxReturn(1);
         } else {
             $auto_user = M('auto_user')->select(); //采集马甲
             $this->assign('auto_user', $auto_user);
+            $brands = M('brand')->select();
+            $this->assign('brands', $brands);
             $response = $this->fetch();
             $this->ajaxReturn(1, '', $response);
         }
@@ -74,10 +81,11 @@ class collect_alimamaAction extends backendAction {
         if ($p > $batch_publish_cache['page_num']) {
             $this->ajaxReturn(0, L('import_success'));
         }
+        $brand_id = $this->_post('brand_id', 'intval', 0);
         $result = $this->_get_list($batch_publish_cache['form_data'], $p);
         if ($result['item_list']) {
             foreach ($result['item_list'] as $val) {
-                $this->_publish_insert($val, $batch_publish_cache['cate_id'], $batch_publish_cache['users']);
+                $this->_publish_insert($val, $batch_publish_cache['cate_id'], $batch_publish_cache['users'], $brand_id);
             }
             $this->ajaxReturn(1);
         } else {
@@ -139,6 +147,7 @@ class collect_alimamaAction extends backendAction {
             $ids = $this->_post('ids', 'trim');
             $cate_id = $this->_post('cate_id', 'intval');
             !$cate_id && $this->ajaxReturn(0, L('please_select') . L('publish_item_cate'));
+            $brand_id = $this->_post('brand_id', 'intval', 0);
             $auid = $this->_post('auid', 'intval');
             //必须指定用户
             !$auid && $this->ajaxReturn(0, L('please_select') . L('auto_user'));
@@ -154,7 +163,7 @@ class collect_alimamaAction extends backendAction {
             $taobaoke_item_list = F('taobaoke_item_list');
             foreach ($taobaoke_item_list as $key => $val) {
                 if (in_array($key, $ids_arr)) {
-                    $this->_publish_insert($val, $cate_id, $users);
+                    $this->_publish_insert($val, $cate_id, $users, $brand_id);
                 }
             }
             $this->ajaxReturn(1, L('operation_success'), '', 'publish');
@@ -164,12 +173,14 @@ class collect_alimamaAction extends backendAction {
             //采集马甲
             $auto_user = M('auto_user')->select();
             $this->assign('auto_user', $auto_user);
+            $brands = M('brand')->select();
+            $this->assign('brands', $brands);
             $response = $this->fetch();
             $this->ajaxReturn(1, '', $response);
         }
     }
 
-    private function _publish_insert($item, $cate_id, $users) {
+    private function _publish_insert($item, $cate_id, $users, $brand_id=0) {
         //随机取一个用户
         $user_rand = array_rand($users);
         $item['title'] = strip_tags($item['title']);
@@ -178,6 +189,7 @@ class collect_alimamaAction extends backendAction {
             'key_id' => 'taobao_' . $item['num_iid'],
             'taobao_sid' => $item['taobao_sid'],
             'cate_id' => $cate_id,
+            'brand_id' => $brand_id,
             'uid' => $users[$user_rand]['id'],
             'uname' => $users[$user_rand]['username'],
             'title' => $item['title'],

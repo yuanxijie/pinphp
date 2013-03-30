@@ -15,6 +15,15 @@
 				</select>
 			</td>
 		</tr>
+        <tr>
+            <th><?php echo L('brand_name');?> :</th>
+            <td>
+                <select name="brand_id">
+                    <option value="0">--<?php echo L('please_select');?>--</option>
+                    <?php if(is_array($brands)): $i = 0; $__LIST__ = $brands;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option value="<?php echo ($val["id"]); ?>"><?php echo ($val["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                </select>
+            </td>
+        </tr>
 	</table>
 	<input type="hidden" name="cate_id" id="J_cate_id" value="0" />
 	<input type="hidden" name="ids" value="<?php echo ($ids); ?>" />

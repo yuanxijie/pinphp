@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title><?php echo ($page_seo["title"]); ?> - Powered by PinPHP</title>
+<title><?php echo ($page_seo["title"]); ?></title>
 <meta name="keywords" content="<?php echo ($page_seo["keywords"]); ?>" />
 <meta name="description" content="<?php echo ($page_seo["description"]); ?>" />
 

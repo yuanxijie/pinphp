@@ -33,18 +33,35 @@ class articleAction extends frontendAction {
 
         }
         $this->assign('articles', $articles);
+        $article_mod = M('article');
+        $news = $article_mod->order('id desc')->limit(3)->select();
+        $article_mod = M('article');
+        $hots = $article_mod->order('hits desc')->limit(3)->select();
+        $this->assign('new_articles', $news);
+        $this->assign('hot_articles', $hots);
+
         $this->display();
     }
 
     public function view() {
         $article_id = $this->_get('id', 0);
         $article_mod = M('article');
+        $article_mod->where(array('id'=>$article_id))->setInc('hits', 1);
         $articles = $article_mod->where(array('id'=>$article_id))->select();
         $article = $articles[0];
 
         $article['add_time'] = date("Y-m-d", $article['add_time']);
 
         $this->assign('article', $article);
+
+        $article_mod = M('article');
+        $news = $article_mod->order('id desc')->limit(3)->select();
+        var_dump($news);
+        exit;
+        $article_mod = M('article');
+        $hots = $article_mod->order('hits desc')->limit(3)->select();
+        $this->assign('new_articles', $news);
+        $this->assign('hot_articles', $hots);
 
         $this->display();
     }

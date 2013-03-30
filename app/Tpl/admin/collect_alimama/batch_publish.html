@@ -21,6 +21,17 @@
 			<th>{:L('import_page_num')} :</th>
 			<td><input type="text" name="page_num" size="4" class="input-text" value="10" /></td>
 		</tr>
+        <tr>
+            <th>{:L('brand_name')}：</th>
+            <td>
+                <select name="brand_id">
+                    <option value="0">--{:L('please_select')}--</option>
+                    <volist name="brands" id="val">
+                        <option value="{$val.id}">{$val.name}</option>
+                    </volist>
+                </select>
+            </td>
+        </tr>
 	</table>
 	<input type="hidden" name="cate_id" id="J_cate_id" value="0" />
 	<input type="hidden" id="J_form_data" name="form_data" value="" />

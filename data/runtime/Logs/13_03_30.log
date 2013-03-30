@@ -1,0 +1,425 @@
+[ 2013-03-30T17:38:51+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000899s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.008539s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1364636331 [ RunTime:0.003051s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.001513s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000875s ]
+INFO: Run load_lang Behavior [ RunTime:-0.041778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.044564s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.003125s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.001485s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY hits DESC,id DESC LIMIT 0,10   [ RunTime:0.001513s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.059644s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000653s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.064124s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003813s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.064609s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.004321s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.065164s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.004875s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.065806s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.005515s ]
+NOTIC: [8] Undefined variable: csses /Users/yuan/Workspace/php/pinphp/data/runtime/Cache/home/11e2f12d84b746b76491e3160c81a5b0.php 第 11 行.
+NOTIC: [8] Undefined variable: jses /Users/yuan/Workspace/php/pinphp/data/runtime/Cache/home/11e2f12d84b746b76491e3160c81a5b0.php 第 15 行.
+SQL: SHOW COLUMNS FROM `pin_adboard` [ RunTime:0.002374s ]
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 2 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.001601s ]
+SQL: SHOW COLUMNS FROM `pin_ad` [ RunTime:0.002821s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 2 ) AND ( `start_time` <= 1364636331 ) AND ( `end_time` >= 1364636331 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.000627s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.116496s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.056207s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.116595s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002691s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.119321s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.119839s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.120383s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.120770s ]
+INFO: Run content_replace Behavior [ RunTime:-0.121342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002479s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.121854s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000664s ]
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 4 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000273s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 4 ) AND ( `start_time` <= 1364636331 ) AND ( `end_time` >= 1364636331 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.000306s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.124136s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.063846s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.124240s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004953s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.126544s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.126603s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.126648s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.126681s ]
+INFO: Run content_replace Behavior [ RunTime:-0.126738s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.004742s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.126860s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.004331s ]
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 5 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000293s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 5 ) AND ( `start_time` <= 1364636331 ) AND ( `end_time` >= 1364636331 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.000239s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.128157s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.067869s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.128243s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.008957s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.129449s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.129502s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.129545s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.129566s ]
+INFO: Run content_replace Behavior [ RunTime:-0.129621s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007650s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.129705s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.007189s ]
+SQL: SHOW COLUMNS FROM `pin_album` [ RunTime:0.002618s ]
+SQL: SELECT * FROM `pin_album` WHERE ( `status` = 1 ) AND ( is_index=1 ) ORDER BY ordid,id DESC LIMIT 3   [ RunTime:0.000747s ]
+SQL: SHOW COLUMNS FROM `pin_flink` [ RunTime:0.002332s ]
+SQL: SELECT * FROM `pin_flink` WHERE ( `status` = 1 ) ORDER BY ordid,id DESC LIMIT 5   [ RunTime:0.000558s ]
+NOTIC: [2] Missing argument 1 for JSMin::__construct(), called in /Users/yuan/Workspace/php/pinphp/app/Lib/Pintag/loadTag.class.php on line 14 and defined /Users/yuan/Workspace/php/pinphp/app/Lib/ORG/JSMin.class.php 第 89 行.
+NOTIC: [8] Undefined variable: input /Users/yuan/Workspace/php/pinphp/app/Lib/ORG/JSMin.class.php 第 91 行.
+NOTIC: [2] Missing argument 1 for Dir::__construct(), called in /Users/yuan/Workspace/php/pinphp/app/Lib/Pintag/loadTag.class.php on line 15 and defined /Users/yuan/Workspace/php/pinphp/app/Lib/ORG/Dir.class.php 第 37 行.
+NOTIC: [8] Undefined variable: path /Users/yuan/Workspace/php/pinphp/app/Lib/ORG/Dir.class.php 第 39 行.
+NOTIC: [8] Undefined variable: path /Users/yuan/Workspace/php/pinphp/app/Lib/ORG/Dir.class.php 第 39 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.129705s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.008957s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.152964s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.153492s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.153579s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.153601s ]
+INFO: Run content_replace Behavior [ RunTime:-0.153738s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.031162s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.153959s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.031443s ]
+
+[ 2013-03-30T17:38:52+08:00 ] ERR: (ThinkException) 无法加载模块:favicon.ico
+[ 2013-03-30T17:38:52+08:00 ] ERR: (ThinkException) 无法加载模块:favicon.ico
+[ 2013-03-30T17:38:54+08:00 ] 127.0.0.1 /?m=brand&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000574s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.002346s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1364636334 [ RunTime:0.000195s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000130s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000053s ]
+INFO: Run load_lang Behavior [ RunTime:-0.012106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013236s ]
+SQL: SHOW COLUMNS FROM `pin_brand_cate` [ RunTime:0.005331s ]
+SQL: SELECT * FROM `pin_brand_cate` WHERE status=0  [ RunTime:0.001278s ]
+SQL: SHOW COLUMNS FROM `pin_brand` [ RunTime:0.002998s ]
+SQL: SELECT * FROM `pin_brand` WHERE ( `brand_cate_id` = 1 )  [ RunTime:0.001503s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.003385s ]
+SQL: SELECT * FROM `pin_item` WHERE ( `brand_id` = 1 ) AND ( `status` = 1 ) LIMIT 12   [ RunTime:0.000877s ]
+SQL: SELECT * FROM `pin_item` WHERE ( `brand_id` = 2 ) AND ( `status` = 1 ) LIMIT 12   [ RunTime:0.000375s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.033879s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000371s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.036116s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.001846s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.036402s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002158s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.036672s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002422s ]
+NOTIC: [8] Undefined variable: page_seo /Users/yuan/Workspace/php/pinphp/data/runtime/Cache/home/024acffd36acc9108fec4accc48d48fe.php 第 5 行.
+NOTIC: [8] Undefined variable: page_seo /Users/yuan/Workspace/php/pinphp/data/runtime/Cache/home/024acffd36acc9108fec4accc48d48fe.php 第 6 行.
+NOTIC: [8] Undefined variable: page_seo /Users/yuan/Workspace/php/pinphp/data/runtime/Cache/home/024acffd36acc9108fec4accc48d48fe.php 第 7 行.
+NOTIC: [2] Missing argument 1 for JSMin::__construct(), called in /Users/yuan/Workspace/php/pinphp/app/Lib/Pintag/loadTag.class.php on line 14 and defined /Users/yuan/Workspace/php/pinphp/app/Lib/ORG/JSMin.class.php 第 89 行.
+NOTIC: [8] Undefined variable: input /Users/yuan/Workspace/php/pinphp/app/Lib/ORG/JSMin.class.php 第 91 行.
+NOTIC: [2] Missing argument 1 for Dir::__construct(), called in /Users/yuan/Workspace/php/pinphp/app/Lib/Pintag/loadTag.class.php on line 15 and defined /Users/yuan/Workspace/php/pinphp/app/Lib/ORG/Dir.class.php 第 37 行.
+NOTIC: [8] Undefined variable: path /Users/yuan/Workspace/php/pinphp/app/Lib/ORG/Dir.class.php 第 39 行.
+NOTIC: [8] Undefined variable: path /Users/yuan/Workspace/php/pinphp/app/Lib/ORG/Dir.class.php 第 39 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.036672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037299s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.071613s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.072241s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.072485s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.072635s ]
+INFO: Run content_replace Behavior [ RunTime:-0.073030s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001726s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.073391s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000362s ]
+
+[ 2013-03-30T17:38:56+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.002628s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1364636336 [ RunTime:0.000225s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000178s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000034s ]
+INFO: Run load_lang Behavior [ RunTime:-0.009069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010274s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.002000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000682s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY hits DESC,id DESC LIMIT 0,10   [ RunTime:0.000585s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.018998s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000343s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.021047s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.001700s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.021278s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.001933s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.021531s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002186s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.021789s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002453s ]
+NOTIC: [8] Undefined variable: csses /Users/yuan/Workspace/php/pinphp/data/runtime/Cache/home/11e2f12d84b746b76491e3160c81a5b0.php 第 11 行.
+NOTIC: [8] Undefined variable: jses /Users/yuan/Workspace/php/pinphp/data/runtime/Cache/home/11e2f12d84b746b76491e3160c81a5b0.php 第 15 行.
+SQL: SHOW COLUMNS FROM `pin_adboard` [ RunTime:0.001230s ]
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 2 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: SHOW COLUMNS FROM `pin_ad` [ RunTime:0.001280s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 2 ) AND ( `start_time` <= 1364636336 ) AND ( `end_time` >= 1364636336 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.000266s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.064242s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.044902s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.064356s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003258s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.067645s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.067878s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.068076s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.068250s ]
+INFO: Run content_replace Behavior [ RunTime:-0.068614s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001256s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.068990s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000514s ]
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 4 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000306s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 4 ) AND ( `start_time` <= 1364636336 ) AND ( `end_time` >= 1364636336 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.000305s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.070877s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.051538s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.070974s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003369s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.072649s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.072702s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.072743s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.072764s ]
+INFO: Run content_replace Behavior [ RunTime:-0.072815s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003751s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.072895s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.003400s ]
+SQL: SELECT * FROM `pin_adboard` WHERE ( `id` = 5 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000258s ]
+SQL: SELECT `id`,`type`,`name`,`url`,`content`,`desc`,`extimg`,`extval` FROM `pin_ad` WHERE ( `board_id` = 5 ) AND ( `start_time` <= 1364636336 ) AND ( `end_time` >= 1364636336 ) AND ( `status` = 1 ) ORDER BY ordid  [ RunTime:0.000272s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.074134s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.054796s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.074223s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006618s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.075414s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.075467s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.075511s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.075532s ]
+INFO: Run content_replace Behavior [ RunTime:-0.075586s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006515s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.075669s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.006178s ]
+NOTIC: [2] Missing argument 1 for JSMin::__construct(), called in /Users/yuan/Workspace/php/pinphp/app/Lib/Pintag/loadTag.class.php on line 14 and defined /Users/yuan/Workspace/php/pinphp/app/Lib/ORG/JSMin.class.php 第 89 行.
+NOTIC: [8] Undefined variable: input /Users/yuan/Workspace/php/pinphp/app/Lib/ORG/JSMin.class.php 第 91 行.
+NOTIC: [2] Missing argument 1 for Dir::__construct(), called in /Users/yuan/Workspace/php/pinphp/app/Lib/Pintag/loadTag.class.php on line 15 and defined /Users/yuan/Workspace/php/pinphp/app/Lib/ORG/Dir.class.php 第 37 行.
+NOTIC: [8] Undefined variable: path /Users/yuan/Workspace/php/pinphp/app/Lib/ORG/Dir.class.php 第 39 行.
+NOTIC: [8] Undefined variable: path /Users/yuan/Workspace/php/pinphp/app/Lib/ORG/Dir.class.php 第 39 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.075669s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006618s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.086238s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.086811s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.086907s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.086929s ]
+INFO: Run content_replace Behavior [ RunTime:-0.087069s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.017337s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.087269s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.017776s ]
+
+[ 2013-03-30T18:04:24+08:00 ] 127.0.0.1 /index.php?g=admin&m=index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000256s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.000842s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1364637864 [ RunTime:0.000178s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000147s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000025s ]
+INFO: Run load_lang Behavior [ RunTime:-0.007174s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008614s ]
+NOTIC: [8] Undefined index: admin /Users/yuan/Workspace/php/pinphp/app/Lib/Action/backendAction.class.php 第 236 行.
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.002752s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.013996s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000373s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.014410s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006361s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.020811s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.021031s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.021282s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.021415s ]
+INFO: Run content_replace Behavior [ RunTime:-0.021673s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001076s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.021918s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000459s ]
+
+[ 2013-03-30T18:04:24+08:00 ] 127.0.0.1 /index.php?g=admin&m=index&a=verify_code&t=1364637864
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001126s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1364637864 [ RunTime:0.000180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000159s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000043s ]
+INFO: Run load_lang Behavior [ RunTime:-0.010205s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012434s ]
+NOTIC: [8] Undefined index: admin /Users/yuan/Workspace/php/pinphp/app/Lib/Action/backendAction.class.php 第 236 行.
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001348s ]
+
+[ 2013-03-30T18:04:31+08:00 ] 127.0.0.1 /index.php?g=admin&m=index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000253s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001157s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1364637871 [ RunTime:0.000173s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000135s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000026s ]
+INFO: Run load_lang Behavior [ RunTime:-0.009871s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011333s ]
+NOTIC: [8] Undefined index: admin /Users/yuan/Workspace/php/pinphp/app/Lib/Action/backendAction.class.php 第 236 行.
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001380s ]
+SQL: SHOW COLUMNS FROM `pin_admin` [ RunTime:0.002410s ]
+SQL: SELECT * FROM `pin_admin` WHERE ( `username` = 'admin' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000609s ]
+SQL: UPDATE `pin_admin` SET `last_time`=1364637871,`last_ip`='127.0.0.1' WHERE ( `id` = 1 ) [ RunTime:0.000335s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.020607s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000387s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.021029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006191s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.027253s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.027458s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.027653s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.027777s ]
+INFO: Run content_replace Behavior [ RunTime:-0.028041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.028275s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000390s ]
+
+[ 2013-03-30T18:04:32+08:00 ] 127.0.0.1 /index.php?g=admin&m=index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000244s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001714s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1364637872 [ RunTime:0.000184s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000178s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000026s ]
+INFO: Run load_lang Behavior [ RunTime:-0.007893s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009316s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001193s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001032s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 0 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000746s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.015877s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000358s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.016255s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008438s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.024739s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.025052s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.025258s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.025375s ]
+INFO: Run content_replace Behavior [ RunTime:-0.025632s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001124s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.025910s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000348s ]
+
+[ 2013-03-30T18:04:32+08:00 ] 127.0.0.1 /index.php?g=admin&m=index&a=panel
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000286s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001244s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1364637872 [ RunTime:0.000207s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000179s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000038s ]
+INFO: Run load_lang Behavior [ RunTime:-0.008530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010030s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001433s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.014755s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000368s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.018261s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003114s ]
+NOTIC: [8] Undefined variable: sub_menu /Users/yuan/Workspace/php/pinphp/data/runtime/Cache/admin/ba3d2a4c7110487814df26e78e828b96.php 第 21 行.
+NOTIC: [8] Undefined variable: big_menu /Users/yuan/Workspace/php/pinphp/data/runtime/Cache/admin/ba3d2a4c7110487814df26e78e828b96.php 第 21 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.018261s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013832s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.029037s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.029328s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.029530s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.029655s ]
+INFO: Run content_replace Behavior [ RunTime:-0.029961s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001204s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.030325s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000402s ]
+
+[ 2013-03-30T18:04:32+08:00 ] 127.0.0.1 /index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000302s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.000897s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1364637872 [ RunTime:0.000186s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000156s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000025s ]
+INFO: Run load_lang Behavior [ RunTime:-0.007542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009649s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001524s ]
+SQL: SELECT * FROM `pin_menu` WHERE ( `often` = 1 )  [ RunTime:0.000588s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.014822s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000497s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: data /Users/yuan/Workspace/php/pinphp/data/runtime/Cache/admin/8bbf59c365bdf6267b9eb5e67d22693d.php 第 3 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015366s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008464s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.023855s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.024058s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.024255s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.024398s ]
+INFO: Run content_replace Behavior [ RunTime:-0.024690s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001056s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024963s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000426s ]
+

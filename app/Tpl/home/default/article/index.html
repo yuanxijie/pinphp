@@ -24,11 +24,10 @@
         <div class="blog_wrap clearfix" id="J_waterfall">
             <div class="J_item wall_tag" style="opacity: 1;">
                 <h3>最新日志：</h3>
-
                 <div class="clearfix">
-                    <li><a title="梦一样的初恋" href="/index.php?m=article&amp;a=view&amp;id=8">梦一样的初恋</a></li>
-                    <li><a title="爱情，就像去远镇" href="/index.php?m=article&amp;a=view&amp;id=7">爱情，就像去远镇</a></li>
-                    <li><a title="爱的礼物" href="/index.php?m=article&amp;a=view&amp;id=6">爱的礼物</a></li>
+                    <volist name="new_articles" id="new_art">
+                        <li><a title="{$new_art.title}" href="/index.php?m=article&amp;a=view&amp;id={$new_art.id}">{$new_art.title}</a></li>
+                    </volist>
                 </div>
             </div>
         </div>
@@ -38,9 +37,9 @@
                 <h3>最热日志：</h3>
 
                 <div class="clearfix">
-                    <li><a title="梦一样的初恋" href="/index.php?m=article&amp;a=view&amp;id=8">梦一样的初恋</a></li>
-                    <li><a title="爱情，就像去远镇" href="/index.php?m=article&amp;a=view&amp;id=7">爱情，就像去远镇</a></li>
-                    <li><a title="爱的礼物" href="/index.php?m=article&amp;a=view&amp;id=6">爱的礼物</a></li>
+                    <volist name="hot_articles" id="hot_art">
+                        <li><a title="{$hot_art.title}" href="/index.php?m=article&amp;a=view&amp;id={$hot_art.id}">{$hot_art.title}</a></li>
+                    </volist>
                 </div>
             </div>
         </div>
@@ -48,17 +47,21 @@
 
     <div class="blog_piece">
         <volist name="articles" id="article">
-            <div class="blog_title"><a title="{$article.title}" href="{:U('article/view', array('id'=>$article['id']))}">{$article.title}</a></div>
+            <div class="blog_title"><a title="{$article.title}"
+                                       href="{:U('article/view', array('id'=>$article['id']))}">{$article.title}</a>
+            </div>
             <div class="blog_intro">
                 <div class="blog_pic"><img src="/data/upload/article/{$article.img}"></div>
                 <div style="text-indent:6px; margin-left:4px;">
                     {$article.intro}
                 </div>
             </div>
-            <div class="blog_into"><a title="梦一样的初恋" href="{:U('article/view', array('id'=>$article['id']))}"><span class="read_more">阅读全文</span></a></div>
+            <div class="blog_into"><a title="梦一样的初恋" href="{:U('article/view', array('id'=>$article['id']))}"><span
+                    class="read_more">阅读全文</span></a></div>
             <div class="blog_tag">标签:{$article.tags}
                 <!-- JiaThis Button BEGIN -->
-                <div class="jiathis_style_24x24" onmouseover="javascript:setShare('{$article.title} #{$article.tags}#', '{:U(\'article/view\', array(\'id\'=>$article[\'id\']))}' ,'      初恋，其实就像一个美丽的气球一样，只能握在手里欣赏和回忆，如果你想知道里面的内容，打开了，就破坏了，就只是剩下几块碎屑，空留惆怅。那些过去的时光，永远也不会再回来了，即使回来了，也不再是原来的味道。','http://www.521715.com/data/upload/article/1302/21/5125bc4d668b1_thumb.jpg');">
+                <div class="jiathis_style_24x24"
+                     onmouseover="javascript:setShare('{$article.title} #{$article.tags}#', '{:U(\'article/view\', array(\'id\'=>$article[\'id\']))}' ,'      初恋，其实就像一个美丽的气球一样，只能握在手里欣赏和回忆，如果你想知道里面的内容，打开了，就破坏了，就只是剩下几块碎屑，空留惆怅。那些过去的时光，永远也不会再回来了，即使回来了，也不再是原来的味道。','http://www.521715.com/data/upload/article/1302/21/5125bc4d668b1_thumb.jpg');">
                     <a class="jiathis_button_qzone"></a>
                     <a class="jiathis_button_tsina"></a>
                     <a class="jiathis_button_tqq"></a>
@@ -67,16 +70,17 @@
                     <a class="jiathis_button_douban"></a>
                     <a class="jiathis_button_tieba"></a>
                     <a class="jiathis_button_tianya"></a>
-                    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+                    <a href="http://www.jiathis.com/share"
+                       class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
                     <a class="jiathis_counter_style"></a>
-                    发布于  {$article.add_time}
+                    发布于 {$article.add_time}
                 </div>
                 <!-- JiaThis Button END -->
             </div>
         </volist>
-        </div>
-        <div class="page_bar">3 条记录 1/1 页</div>
     </div>
+    <div class="page_bar">3 条记录 1/1 页</div>
+</div>
 </div>
 
 <include file="public:footer"/>

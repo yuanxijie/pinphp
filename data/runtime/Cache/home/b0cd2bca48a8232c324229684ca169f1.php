@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-<title><?php echo ($page_seo["title"]); ?> - Powered by PinPHP</title>
+<title><?php echo ($page_seo["title"]); ?></title>
 <meta name="keywords" content="<?php echo ($page_seo["keywords"]); ?>" />
 <meta name="description" content="<?php echo ($page_seo["description"]); ?>" />
 
@@ -97,11 +97,8 @@
         <div class="blog_wrap clearfix" id="J_waterfall">
             <div class="J_item wall_tag" style="opacity: 1;">
                 <h3>最新日志：</h3>
-
                 <div class="clearfix">
-                    <li><a title="梦一样的初恋" href="/index.php?m=article&amp;a=view&amp;id=8">梦一样的初恋</a></li>
-                    <li><a title="爱情，就像去远镇" href="/index.php?m=article&amp;a=view&amp;id=7">爱情，就像去远镇</a></li>
-                    <li><a title="爱的礼物" href="/index.php?m=article&amp;a=view&amp;id=6">爱的礼物</a></li>
+                    <?php if(is_array($new_articles)): $i = 0; $__LIST__ = $new_articles;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$new_art): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($new_art["title"]); ?>" href="/index.php?m=article&amp;a=view&amp;id=<?php echo ($new_art["id"]); ?>"><?php echo ($new_art["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </div>
             </div>
         </div>
@@ -111,26 +108,28 @@
                 <h3>最热日志：</h3>
 
                 <div class="clearfix">
-                    <li><a title="梦一样的初恋" href="/index.php?m=article&amp;a=view&amp;id=8">梦一样的初恋</a></li>
-                    <li><a title="爱情，就像去远镇" href="/index.php?m=article&amp;a=view&amp;id=7">爱情，就像去远镇</a></li>
-                    <li><a title="爱的礼物" href="/index.php?m=article&amp;a=view&amp;id=6">爱的礼物</a></li>
+                    <?php if(is_array($hot_articles)): $i = 0; $__LIST__ = $hot_articles;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$hot_art): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($hot_art["title"]); ?>" href="/index.php?m=article&amp;a=view&amp;id=<?php echo ($hot_art["id"]); ?>"><?php echo ($hot_art["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="blog_piece">
-        <?php if(is_array($articles)): $i = 0; $__LIST__ = $articles;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$article): $mod = ($i % 2 );++$i;?><div class="blog_title"><a title="<?php echo ($article["title"]); ?>" href="<?php echo U('article/view', array('id'=>$article['id']));?>"><?php echo ($article["title"]); ?></a></div>
+        <?php if(is_array($articles)): $i = 0; $__LIST__ = $articles;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$article): $mod = ($i % 2 );++$i;?><div class="blog_title"><a title="<?php echo ($article["title"]); ?>"
+                                       href="<?php echo U('article/view', array('id'=>$article['id']));?>"><?php echo ($article["title"]); ?></a>
+            </div>
             <div class="blog_intro">
                 <div class="blog_pic"><img src="/data/upload/article/<?php echo ($article["img"]); ?>"></div>
                 <div style="text-indent:6px; margin-left:4px;">
                     <?php echo ($article["intro"]); ?>
                 </div>
             </div>
-            <div class="blog_into"><a title="梦一样的初恋" href="<?php echo U('article/view', array('id'=>$article['id']));?>"><span class="read_more">阅读全文</span></a></div>
+            <div class="blog_into"><a title="梦一样的初恋" href="<?php echo U('article/view', array('id'=>$article['id']));?>"><span
+                    class="read_more">阅读全文</span></a></div>
             <div class="blog_tag">标签:<?php echo ($article["tags"]); ?>
                 <!-- JiaThis Button BEGIN -->
-                <div class="jiathis_style_24x24" onmouseover="javascript:setShare('<?php echo ($article["title"]); ?> #<?php echo ($article["tags"]); ?>#', '<?php echo U('article/view', array('id'=>$article['id']));?>' ,'      初恋，其实就像一个美丽的气球一样，只能握在手里欣赏和回忆，如果你想知道里面的内容，打开了，就破坏了，就只是剩下几块碎屑，空留惆怅。那些过去的时光，永远也不会再回来了，即使回来了，也不再是原来的味道。','http://www.521715.com/data/upload/article/1302/21/5125bc4d668b1_thumb.jpg');">
+                <div class="jiathis_style_24x24"
+                     onmouseover="javascript:setShare('<?php echo ($article["title"]); ?> #<?php echo ($article["tags"]); ?>#', '<?php echo U('article/view', array('id'=>$article['id']));?>' ,'      初恋，其实就像一个美丽的气球一样，只能握在手里欣赏和回忆，如果你想知道里面的内容，打开了，就破坏了，就只是剩下几块碎屑，空留惆怅。那些过去的时光，永远也不会再回来了，即使回来了，也不再是原来的味道。','http://www.521715.com/data/upload/article/1302/21/5125bc4d668b1_thumb.jpg');">
                     <a class="jiathis_button_qzone"></a>
                     <a class="jiathis_button_tsina"></a>
                     <a class="jiathis_button_tqq"></a>
@@ -139,15 +138,16 @@
                     <a class="jiathis_button_douban"></a>
                     <a class="jiathis_button_tieba"></a>
                     <a class="jiathis_button_tianya"></a>
-                    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+                    <a href="http://www.jiathis.com/share"
+                       class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
                     <a class="jiathis_counter_style"></a>
-                    发布于  <?php echo ($article["add_time"]); ?>
+                    发布于 <?php echo ($article["add_time"]); ?>
                 </div>
                 <!-- JiaThis Button END -->
             </div><?php endforeach; endif; else: echo "" ;endif; ?>
-        </div>
-        <div class="page_bar">3 条记录 1/1 页</div>
     </div>
+    <div class="page_bar">3 条记录 1/1 页</div>
+</div>
 </div>
 
 <div class="footer_wrap rt10">

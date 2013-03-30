@@ -445,6 +445,7 @@ return array(
 
     //采集马甲
     'auto_user' => '采集马甲',
+    'brand_name' => '品牌',
 
     //阿里妈妈采集
     'tbk_item_collect' => '淘宝客商品采集',
