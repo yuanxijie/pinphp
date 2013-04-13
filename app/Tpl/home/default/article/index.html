@@ -7,17 +7,64 @@
 <include file="public:header"/>
 
 <div class="main_wrap blog_white">
+    <notempty name="brand">
+    <div class="brand_item">
+        <div class="brand_item_info">
+            <div class="bic_brand j_BrandItemInfo">
+                <p class="bic_logo">
+                    <a href="#"><img width="90" height="45" alt="ONLY" src="{$brand.logo}"></a>
+                    <strong>{$brand.name}</strong>
+                </p>
+                <dl class="bIi-style clearfix">
+                    <dt>品牌描述：</dt>
+                    <dd>{$brand.memo}</dd>
+                </dl>
+                <p>月总销量：{$brand.month_sale}件</p>
+                <p class="bIi-intro j_BrandItemIntro">{$brand.short_desc}</p>
+            </div>
+            <p class="bIi-addBtn">
+                <a data-id="16" class="J_likeitem like" href="javascript:void(0);">喜欢</a>
+            </p>
+        </div>
+        <div class="brand_item_cont">
+            <div class="brand_item_cont_title">
+                <p class="bIc-title-notice">
+                    <a target="_blank" class="bIc-title-notice-shop" href="http://only.tmall.com">{$brand.name}官方旗舰店</a><em>品牌直销</em>
+                    <a target="_blank" href="http://only.tmall.com">满就免邮费</a>
+                </p>
+                <a target="_self" class="bIc-title-more ui-more-nbg" href="{:U('brand/view', array('brand_id'=>$brand['id']))}">还有<strong>{$brand.item_count}</strong>件商品<i class="ui-more-nbg-arrow"></i></a>
+            </div>
+            <a class="bIc-slide bIc-slide-prev ks-switchable-disable-btn" href="javascript:void(0);" data-spm-anchor-id="3.1000474.0.51">&lt;</a>
+            <div class="brand_item_cont_slide">
+                <ul class="bIc-slideList" style="position: absolute; width: 2160px; left: 0px;">
+                    <volist name="brand['brand_items']" id="brand_item">
+                        <li class="j_BrandItemList" style="display: block; float: left;">
+                            <p class="bIc-slideList-img"><a href="{:U('item/index', array('id'=>$brand_item['id']))}" target="_blank">
+                                <img width="160" height="160" src="{$brand_item.img}_160x160.jpg"></a></p>
+                            <p class="bIc-slideList-sell">
+                                <span class="bIc-slideList-sell-price ui-price"><span class="ui-price-icon">¥</span>{$brand_item.price}</span>
+                                <span class="bIc-slideList-sell-num">月销量：<em>550</em></span>
+                            </p>
+                            <p class="bIc-slideList-title"><a href="{:U('item/index', array('id'=>$brand_item['id']))}" target="_blank">{$brand_item.title}</a></p>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+            <a class="bIc-slide bIc-slide-next" href="javascript:void(0);" data-spm-anchor-id="3.1000474.0.76">&gt;</a>
+        </div>
+    </div>
+    </notempty>
     <div class="blog_wrap clearfix">
         <div class="clearfix masonry" id="J_waterfall" style="position: relative; height: 161px;">
             <div class="J_item wall_tag masonry-brick" style="position: absolute; top: 0px; left: 0px; opacity: 1;">
                 <h3>日志分类：</h3>
 
                 <div class="tags clearfix">
-                    <a class="current" href="/index.php?m=article&amp;a=index">全部</a>
-                    <a title="" href="/index.php?m=article&amp;a=index&amp;id=8">爱情</a><a title=""
-                                                                                          href="/index.php?m=article&amp;a=index&amp;id=9">生日</a><a
-                        title="" href="/index.php?m=article&amp;a=index&amp;id=10">节日</a><a title=""
-                                                                                            href="/index.php?m=article&amp;a=index&amp;id=11">职业</a>
+                    <a <empty name="brand_name">class="current"</empty> href="{:U('article/index')}">全部</a>
+                    <volist name="brands" id="brand" key="brand_id">
+                        <a <if condition="$brand_name eq $brand['name']"> class="current"</if> title="{$brand.name} {$brand.memo}" href="{:U('article/index', array('brand_id'=>$brand_id))}">{$brand.name}</a>
+                    </volist>
+                    <a title="" href="{:U('article/index', array('brand_id'=>1000000))}">爱情</a>
                 </div>
             </div>
         </div>
@@ -26,7 +73,7 @@
                 <h3>最新日志：</h3>
                 <div class="clearfix">
                     <volist name="new_articles" id="new_art">
-                        <li><a title="{$new_art.title}" href="/index.php?m=article&amp;a=view&amp;id={$new_art.id}">{$new_art.title}</a></li>
+                        <li><a title="{$new_art.title}" href="{:U('article/view', array('id'=>$new_art['id']))}">{$new_art.title}</a></li>
                     </volist>
                 </div>
             </div>
@@ -38,7 +85,7 @@
 
                 <div class="clearfix">
                     <volist name="hot_articles" id="hot_art">
-                        <li><a title="{$hot_art.title}" href="/index.php?m=article&amp;a=view&amp;id={$hot_art.id}">{$hot_art.title}</a></li>
+                        <li><a title="{$hot_art.title}" href="{:U('article/view', array('id'=>$hot_art['id']))}">{$hot_art.title}</a></li>
                     </volist>
                 </div>
             </div>
@@ -51,17 +98,23 @@
                                        href="{:U('article/view', array('id'=>$article['id']))}">{$article.title}</a>
             </div>
             <div class="blog_intro">
-                <div class="blog_pic"><img src="/data/upload/article/{$article.img}"></div>
+                <div class="blog_pic">
+                <if condition="substr($article['img'], 0, 4) eq 'http'">
+                    <img src="{$article.img}">
+                <else/>
+                    <img src="/data/upload/article/{$article.img}">
+                </if>
+                </div>
                 <div style="text-indent:6px; margin-left:4px;">
                     {$article.intro}
                 </div>
             </div>
-            <div class="blog_into"><a title="梦一样的初恋" href="{:U('article/view', array('id'=>$article['id']))}"><span
+            <div class="blog_into"><a title="{$article.title}" href="{:U('article/view', array('id'=>$article['id']))}"><span
                     class="read_more">阅读全文</span></a></div>
             <div class="blog_tag">标签:{$article.tags}
                 <!-- JiaThis Button BEGIN -->
                 <div class="jiathis_style_24x24"
-                     onmouseover="javascript:setShare('{$article.title} #{$article.tags}#', '{:U(\'article/view\', array(\'id\'=>$article[\'id\']))}' ,'      初恋，其实就像一个美丽的气球一样，只能握在手里欣赏和回忆，如果你想知道里面的内容，打开了，就破坏了，就只是剩下几块碎屑，空留惆怅。那些过去的时光，永远也不会再回来了，即使回来了，也不再是原来的味道。','http://www.521715.com/data/upload/article/1302/21/5125bc4d668b1_thumb.jpg');">
+                     onmouseover="javascript:setShare('{$article.title} #{$article.tags}#', '{:U(\'article/view\', array(\'id\'=>$article[\'id\']), true, false, true)}' ,' {$article.intro}','http://{$server_name}/data/upload/article/{$article.img}');">
                     <a class="jiathis_button_qzone"></a>
                     <a class="jiathis_button_tsina"></a>
                     <a class="jiathis_button_tqq"></a>
@@ -79,7 +132,23 @@
             </div>
         </volist>
     </div>
-    <div class="page_bar">3 条记录 1/1 页</div>
+    <div class="page_bar">
+        <present name="total_page">
+            <for start="1" end="$total_page+1" name="p">
+                <if condition="$p eq $cur_page">
+                    <span class="current">{$cur_page}</span>
+                <else/>
+                    <a href="{:U('article/index', array('p'=>$p))}">&nbsp;{$p}&nbsp;</a>
+                </if>
+            </for>
+            <if condition="$cur_page lt $total_page">
+                <a href="{:U('article/index', array('p'=>$cur_page+1))}">下一页&gt;</a>
+            </if>
+        </present>
+        <empty name="total_page">
+            1/1 页
+        </empty>
+    </div>
 </div>
 </div>
 

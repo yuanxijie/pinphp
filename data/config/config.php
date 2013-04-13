@@ -12,4 +12,5 @@ return array(
     'LOAD_EXT_CONFIG' => 'url,db', //扩展配置
     
     'SHOW_PAGE_TRACE' => false,
+    'ARTICLE_PAGE_NUM' =>5,
 );

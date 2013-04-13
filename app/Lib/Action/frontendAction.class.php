@@ -21,6 +21,7 @@ class frontendAction extends baseAction {
         $this->_assign_oauth();
         //网站导航选中
         $this->assign('nav_curr', '');
+        $this->assign('server_name', $_SERVER['SERVER_NAME']);
     }
     
     /**

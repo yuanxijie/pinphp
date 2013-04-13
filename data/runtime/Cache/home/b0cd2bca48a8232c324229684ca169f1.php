@@ -80,17 +80,58 @@
 </div>
 
 <div class="main_wrap blog_white">
+    <?php if(!empty($brand)): ?><div class="brand_item">
+        <div class="brand_item_info">
+            <div class="bic_brand j_BrandItemInfo">
+                <p class="bic_logo">
+                    <a href="#"><img width="90" height="45" alt="ONLY" src="<?php echo ($brand["logo"]); ?>"></a>
+                    <strong><?php echo ($brand["name"]); ?></strong>
+                </p>
+                <dl class="bIi-style clearfix">
+                    <dt>品牌描述：</dt>
+                    <dd><?php echo ($brand["memo"]); ?></dd>
+                </dl>
+                <p>月总销量：<?php echo ($brand["month_sale"]); ?>件</p>
+                <p class="bIi-intro j_BrandItemIntro"><?php echo ($brand["short_desc"]); ?></p>
+            </div>
+            <p class="bIi-addBtn">
+                <a data-id="16" class="J_likeitem like" href="javascript:void(0);">喜欢</a>
+            </p>
+        </div>
+        <div class="brand_item_cont">
+            <div class="brand_item_cont_title">
+                <p class="bIc-title-notice">
+                    <a target="_blank" class="bIc-title-notice-shop" href="http://only.tmall.com"><?php echo ($brand["name"]); ?>官方旗舰店</a><em>品牌直销</em>
+                    <a target="_blank" href="http://only.tmall.com">满就免邮费</a>
+                </p>
+                <a target="_self" class="bIc-title-more ui-more-nbg" href="<?php echo U('brand/view', array('brand_id'=>$brand['id']));?>">还有<strong><?php echo ($brand["item_count"]); ?></strong>件商品<i class="ui-more-nbg-arrow"></i></a>
+            </div>
+            <a class="bIc-slide bIc-slide-prev ks-switchable-disable-btn" href="javascript:void(0);" data-spm-anchor-id="3.1000474.0.51">&lt;</a>
+            <div class="brand_item_cont_slide">
+                <ul class="bIc-slideList" style="position: absolute; width: 2160px; left: 0px;">
+                    <?php if(is_array($brand['brand_items'])): $i = 0; $__LIST__ = $brand['brand_items'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$brand_item): $mod = ($i % 2 );++$i;?><li class="j_BrandItemList" style="display: block; float: left;">
+                            <p class="bIc-slideList-img"><a href="<?php echo U('item/index', array('id'=>$brand_item['id']));?>" target="_blank">
+                                <img width="160" height="160" src="<?php echo ($brand_item["img"]); ?>_160x160.jpg"></a></p>
+                            <p class="bIc-slideList-sell">
+                                <span class="bIc-slideList-sell-price ui-price"><span class="ui-price-icon">¥</span><?php echo ($brand_item["price"]); ?></span>
+                                <span class="bIc-slideList-sell-num">月销量：<em>550</em></span>
+                            </p>
+                            <p class="bIc-slideList-title"><a href="<?php echo U('item/index', array('id'=>$brand_item['id']));?>" target="_blank"><?php echo ($brand_item["title"]); ?></a></p>
+                        </li><?php endforeach; endif; else: echo "" ;endif; ?>
+                </ul>
+            </div>
+            <a class="bIc-slide bIc-slide-next" href="javascript:void(0);" data-spm-anchor-id="3.1000474.0.76">&gt;</a>
+        </div>
+    </div><?php endif; ?>
     <div class="blog_wrap clearfix">
         <div class="clearfix masonry" id="J_waterfall" style="position: relative; height: 161px;">
             <div class="J_item wall_tag masonry-brick" style="position: absolute; top: 0px; left: 0px; opacity: 1;">
                 <h3>日志分类：</h3>
 
                 <div class="tags clearfix">
-                    <a class="current" href="/index.php?m=article&amp;a=index">全部</a>
-                    <a title="" href="/index.php?m=article&amp;a=index&amp;id=8">爱情</a><a title=""
-                                                                                          href="/index.php?m=article&amp;a=index&amp;id=9">生日</a><a
-                        title="" href="/index.php?m=article&amp;a=index&amp;id=10">节日</a><a title=""
-                                                                                            href="/index.php?m=article&amp;a=index&amp;id=11">职业</a>
+                    <a <?php if(empty($brand_name)): ?>class="current"<?php endif; ?> href="<?php echo U('article/index');?>">全部</a>
+                    <?php if(is_array($brands)): $brand_id = 0; $__LIST__ = $brands;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$brand): $mod = ($brand_id % 2 );++$brand_id;?><a <?php if($brand_name == $brand['name']): ?>class="current"<?php endif; ?> title="<?php echo ($brand["name"]); ?> <?php echo ($brand["memo"]); ?>" href="<?php echo U('article/index', array('brand_id'=>$brand_id));?>"><?php echo ($brand["name"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+                    <a title="" href="<?php echo U('article/index', array('brand_id'=>1000000));?>">爱情</a>
                 </div>
             </div>
         </div>
@@ -98,7 +139,7 @@
             <div class="J_item wall_tag" style="opacity: 1;">
                 <h3>最新日志：</h3>
                 <div class="clearfix">
-                    <?php if(is_array($new_articles)): $i = 0; $__LIST__ = $new_articles;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$new_art): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($new_art["title"]); ?>" href="/index.php?m=article&amp;a=view&amp;id=<?php echo ($new_art["id"]); ?>"><?php echo ($new_art["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                    <?php if(is_array($new_articles)): $i = 0; $__LIST__ = $new_articles;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$new_art): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($new_art["title"]); ?>" href="<?php echo U('article/view', array('id'=>$new_art['id']));?>"><?php echo ($new_art["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </div>
             </div>
         </div>
@@ -108,7 +149,7 @@
                 <h3>最热日志：</h3>
 
                 <div class="clearfix">
-                    <?php if(is_array($hot_articles)): $i = 0; $__LIST__ = $hot_articles;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$hot_art): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($hot_art["title"]); ?>" href="/index.php?m=article&amp;a=view&amp;id=<?php echo ($hot_art["id"]); ?>"><?php echo ($hot_art["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                    <?php if(is_array($hot_articles)): $i = 0; $__LIST__ = $hot_articles;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$hot_art): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($hot_art["title"]); ?>" href="<?php echo U('article/view', array('id'=>$hot_art['id']));?>"><?php echo ($hot_art["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </div>
             </div>
         </div>
@@ -119,17 +160,21 @@
                                        href="<?php echo U('article/view', array('id'=>$article['id']));?>"><?php echo ($article["title"]); ?></a>
             </div>
             <div class="blog_intro">
-                <div class="blog_pic"><img src="/data/upload/article/<?php echo ($article["img"]); ?>"></div>
+                <div class="blog_pic">
+                <?php if(substr($article['img'], 0, 4) == 'http'): ?><img src="<?php echo ($article["img"]); ?>">
+                <?php else: ?>
+                    <img src="/data/upload/article/<?php echo ($article["img"]); ?>"><?php endif; ?>
+                </div>
                 <div style="text-indent:6px; margin-left:4px;">
                     <?php echo ($article["intro"]); ?>
                 </div>
             </div>
-            <div class="blog_into"><a title="梦一样的初恋" href="<?php echo U('article/view', array('id'=>$article['id']));?>"><span
+            <div class="blog_into"><a title="<?php echo ($article["title"]); ?>" href="<?php echo U('article/view', array('id'=>$article['id']));?>"><span
                     class="read_more">阅读全文</span></a></div>
             <div class="blog_tag">标签:<?php echo ($article["tags"]); ?>
                 <!-- JiaThis Button BEGIN -->
                 <div class="jiathis_style_24x24"
-                     onmouseover="javascript:setShare('<?php echo ($article["title"]); ?> #<?php echo ($article["tags"]); ?>#', '<?php echo U('article/view', array('id'=>$article['id']));?>' ,'      初恋，其实就像一个美丽的气球一样，只能握在手里欣赏和回忆，如果你想知道里面的内容，打开了，就破坏了，就只是剩下几块碎屑，空留惆怅。那些过去的时光，永远也不会再回来了，即使回来了，也不再是原来的味道。','http://www.521715.com/data/upload/article/1302/21/5125bc4d668b1_thumb.jpg');">
+                     onmouseover="javascript:setShare('<?php echo ($article["title"]); ?> #<?php echo ($article["tags"]); ?>#', '<?php echo U('article/view', array('id'=>$article['id']), true, false, true);?>' ,' <?php echo ($article["intro"]); ?>','http://<?php echo ($server_name); ?>/data/upload/article/<?php echo ($article["img"]); ?>');">
                     <a class="jiathis_button_qzone"></a>
                     <a class="jiathis_button_tsina"></a>
                     <a class="jiathis_button_tqq"></a>
@@ -146,7 +191,13 @@
                 <!-- JiaThis Button END -->
             </div><?php endforeach; endif; else: echo "" ;endif; ?>
     </div>
-    <div class="page_bar">3 条记录 1/1 页</div>
+    <div class="page_bar">
+        <?php if(isset($total_page)): $__FOR_START_2037548486__=1;$__FOR_END_2037548486__=$total_page+1;for($p=$__FOR_START_2037548486__;$p < $__FOR_END_2037548486__;$p+=1){ if($p == $cur_page): ?><span class="current"><?php echo ($cur_page); ?></span>
+                <?php else: ?>
+                    <a href="<?php echo U('article/index', array('p'=>$p));?>">&nbsp;<?php echo ($p); ?>&nbsp;</a><?php endif; } ?>
+            <?php if($cur_page < $total_page): ?><a href="<?php echo U('article/index', array('p'=>$cur_page+1));?>">下一页&gt;</a><?php endif; endif; ?>
+        <?php if(empty($total_page)): ?>1/1 页<?php endif; ?>
+    </div>
 </div>
 </div>
 

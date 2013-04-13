@@ -261,4 +261,8 @@ class backendAction extends baseAction
             return false;
         }
     }
+
+    protected function _get_imgdir() {
+        return $_SERVER['DOCUMENT_ROOT'] .  "/data/upload/article/";
+    }
 }

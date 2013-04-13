@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title><?php echo ($page_seo["title"]); ?> - Powered by PinPHP</title>
+<title><?php echo ($page_seo["title"]); ?></title>
 <meta name="keywords" content="<?php echo ($page_seo["keywords"]); ?>" />
 <meta name="description" content="<?php echo ($page_seo["description"]); ?>" />
 
@@ -138,7 +138,7 @@
         <p class="intro clr6"><?php echo ($item["intro"]); ?></p>
         <!--评论-->
         <?php if(!empty($item['comment_list'])): ?><ul class="rep_list">
-            <?php $__FOR_START_234389435__=0;$__FOR_END_234389435__=C('pin_item_cover_comments');for($i=$__FOR_START_234389435__;$i < $__FOR_END_234389435__;$i+=1){ if(!empty($item['comment_list'][$i])): ?><li class="rep_f">
+            <?php $__FOR_START_1873894254__=0;$__FOR_END_1873894254__=C('pin_item_cover_comments');for($i=$__FOR_START_1873894254__;$i < $__FOR_END_1873894254__;$i+=1){ if(!empty($item['comment_list'][$i])): ?><li class="rep_f">
                 <a href="<?php echo U('space/index', array('uid'=>$item['comment_list'][$i]['uid']));?>" target="_blank">
                     <img src="<?php echo avatar($item['comment_list'][$i]['uid'], 24);?>" class="J_card avt fl r3" alt="<?php echo ($item['comment_list'][$i]['uname']); ?>" data-uid="<?php echo ($item['comment_list'][$i]['uid']); ?>">
                 </a>
