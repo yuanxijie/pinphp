@@ -33,7 +33,7 @@ class collect_alimamaAction extends backendAction {
         if (IS_POST) {
             $cate_id = $this->_post('cate_id', 'intval');
             !$cate_id && $this->ajaxReturn(0, L('please_select') . L('publish_item_cate'));
-            $brand_id = $this->_post('brand_id', 'intval', 0);
+
             $auid = $this->_post('auid', 'intval');
             //必须指定用户
             !$auid && $this->ajaxReturn(0, L('please_select') . L('auto_user'));
@@ -49,12 +49,14 @@ class collect_alimamaAction extends backendAction {
             //搜索条件
             $form_data = $this->_post('form_data', 'urldecode');
             parse_str($form_data, $form_data);
+            $brand_id = $this->_post('brand_id', 'intval', 0);
             //把采集信息写入缓存
             F('batch_publish_cache', array(
                 'cate_id' => $cate_id,
                 'users' => $users,
                 'page_num' => $page_num,
                 'form_data' => $form_data,
+                'brand_id' => $brand_id
             ));
             $brands = M('brand')->select();
             $this->assign('brands', $brands);
@@ -81,8 +83,9 @@ class collect_alimamaAction extends backendAction {
         if ($p > $batch_publish_cache['page_num']) {
             $this->ajaxReturn(0, L('import_success'));
         }
-        $brand_id = $this->_post('brand_id', 'intval', 0);
+
         $result = $this->_get_list($batch_publish_cache['form_data'], $p);
+        $brand_id = $batch_publish_cache['brand_id'];
         if ($result['item_list']) {
             foreach ($result['item_list'] as $val) {
                 $this->_publish_insert($val, $batch_publish_cache['cate_id'], $batch_publish_cache['users'], $brand_id);
