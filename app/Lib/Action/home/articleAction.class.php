@@ -116,6 +116,7 @@ class articleAction extends frontendAction {
         $brands = $brand_mod->getField('id,name, memo');
         $this->assign('brands', $brands);
 
+        $title = $article['title'];
         if(intval($article['brand_id'])) {
             $brand_id = intval($article['brand_id']);
             $where['brand_id'] = $brand_id;
@@ -133,8 +134,20 @@ class articleAction extends frontendAction {
 
             $this->assign('brand_name', $brand['name']);
             $this->assign('brand', $brand);
-
+            $site_title = C('pin_site_title');
+            $title = $site_title . "-" . "品牌列表" . "-" . $brand['name'] . "-" . $article['title'];
+            $keywords = $brand['name']. "品牌介绍";
+            $description = $brand['short_desc'];
         }
+
+
+
+        $this->assign('page_seo', array(
+            'title' => $title,
+            'keywords' => $keywords,
+            'description' => $description
+        ));
+
         $this->display();
     }
 }
