@@ -3,6 +3,13 @@ if (!is_file('./data/install.lock')) {
     header('Location: ./install.php');
     exit;
 }
+
+$server_name = $_SERVER['SERVER_NAME'];
+if(strpos($server_name, 'www') === 0) {
+    $server_name = str_replace('www.', '', $server_name);
+    header("Location: http://$server_name", TRUE, 301);
+    exit;
+}
 /* 当前PinPHP程序版本 */
 define('PIN_VERSION', '3.0');
 /* 当前PinPHP程序Release */
