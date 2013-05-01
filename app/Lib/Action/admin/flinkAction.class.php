@@ -80,7 +80,7 @@ class flinkAction extends backendAction
      * @staticvar null $dir
      * @return string
      */
-    private function _get_imgdir() {
+    protected  function _get_imgdir() {
         static $dir = null;
         if ($dir === null) {
             $dir = './data/upload/flink/';
